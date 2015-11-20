@@ -1,0 +1,276 @@
+﻿button, input, select{
+    padding: 5px;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 16px;
+}
+
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+
+h3{
+    border-bottom: 1px solid #DDD9D9;
+    margin-top: 0px;
+}
+
+body{
+    font-family: "Calibri";
+}
+
+.tab-content{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tab-active{
+    display:block;
+}
+
+.tab-control-active{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.control-container{
+    background-color: #FAFAFA;
+    padding: 20px;
+    border: 1px solid #E6E4E4;
+    margin-bottom: 20px;
+}
+#status-div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.error{
+    color: #a94442;
+    background-color: #EEBEBE;
+    border: 1px solid #B1727C;
+    padding: 10px;
+}
+
+.success{
+    border: 1px solid green;
+    background-color: greenyellow;
+    padding: 10px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #AACE8C;
+}
+
+.paging-control{
+    padding: 5px;
+    width: 40px;
+}
+
+.img-search-result{
+    position: relative;
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.div-img {
+    height: 280px;
+    width: 195px;
+    overflow: hidden;
+    display: inline;
+    float: left;
+    position: relative;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+.menu-list{
+    list-style-type: none;
+    background-color: #FAFAFA;
+    padding: 20px;
+    border: 1px solid #E6E4E4;
+}
+
+.menu-list>li{
+    width:auto;
+    display:inline;
+    border-right: 1px solid #D9D2D2;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.menu-list a{
+    text-decoration: none;
+}
+
+#search-box{
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-button{
+    padding: 5px;
+}
+
+#paging-control-container, #gallery-status-container{
+    display: inline-block;
+}
+
+.affix-top{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 5000;
+    width: 100%;
+ 
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.affix-bottom{
+    position: fixed;
+    bottom:20px;
+    left:0;
+    z-index: 5000;
+    width: 100%;
+     
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.add-to-gallery-control{
+    position: absolute;
+    top:5px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.4);
+    background-image: url('../images/select-image.png');
+    background-position-x: 40%;
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+}
+
+.image-selected{
+    background-image: url('../images/select-image-green.png')!important;
+}
+
+.div-img{
+    cursor: pointer;
+}
+
+#popup-container{
+    visibility: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.visible{
+    visibility:visible !important;
+}
+
+.hidden{
+    visibility:hidden;
+}
+
+.popup-image{
+    background-color: #fff;
+    border:1px solid #000;
+    text-align:center;
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+}
+
+.popup-control{
+    position: absolute;
+    top:50%;
+    background-color: rgba(0,0,0,0.4);
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.popup-prev{
+    left:0;
+    background-image: url('../images/prev-image.png');
+    background-repeat:no-repeat;
+}
+ 
+.popup-prev:hover{
+    background-image: url('../images/prev-image-hover.png');
+}
+
+.popup-next{
+    right:0;    
+    background-image: url('../images/next-image.png');
+    background-repeat:no-repeat;        
+}
+
+.popup-next:hover{
+    background-image: url('../images/next-image-hover.png');
+}
+
+@media (max-width: 530px){
+    .div-img{
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 700px){
+    #gallery-status-container{
+        display: block;
+
+    }
+
+    #gallery-status-container button{
+        width: 100%;
+    }
+
+    #paging-control-container{
+        display: block;
+    }
+
+    .paging-control{
+        width: 50%;
+
+    }
+    
+    .affix-top button{
+        height: 40px;
+    }
+
+    .affix-bottom .paging-control {
+        height: 40px;
+    }
+}
+
+.settings-label{
+    width: 150px;
+    display: inline-block;
+}
+
+.controls{
+    padding: 10px;
+}

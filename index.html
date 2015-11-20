@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JobTest Flickr Gallery</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- DOM helpers, used by other modules -->
+    <script type="text/javascript" src="js/helper.js"></script>
+    <!--Controller and scaffolding module -->
+    <script type="text/javascript" src="js/app-controller.js"></script>
+    <!--Module that handles flicker interaction gallery -->
+    <script type="text/javascript" src="js/flickr-gallery.js"></script>
+    <!--Module that handles user selected gallery -->
+    <script type="text/javascript" src="js/custom-user-gallery.js"></script>
+    <script>
+        window.onload = function () {
+            //Init app
+            Controller.init();
+        };
+
+        //Flickr JSONP callback
+        function processFlickrResponse(response) {
+            FlickrGallery.processFlickrResponse(response);
+        }
+    </script>
+</head>
+<body id="container">
+
+    <ul class="menu-list">
+        <li><a href="#" class="tab" data-target="container-search">Search</a></li>
+        <li><a href="#" class="tab" data-target="container-gallery" id="gallery-tab-toggle">My Gallery</a></li>
+        <li><a href="#" class="tab" data-target="container-settings">Settings</a></li>
+    </ul>
+    <!-- Flickr search module-->
+    <div id="container-search" class="tab-content">
+
+        <div class="control-container">
+            <h3>Search Flickr</h3>
+            <form id="search-form">
+                <input type="text" id="search-box" placeholder="Type your search here" />
+                <button type="submit" id="search-button">Search</button>
+            </form>
+        </div>
+
+        <div class="control-container" id="controls-menu">
+            <div id="gallery-status-container" class="a-top">
+                <button type="button" id="gallery-button">View Selected Images</button>
+                <button type="button" id="clear-selection-button">Clear selection</button>
+            </div>
+            <div id="paging-control-container" class="a-bottom">
+            </div>
+        </div>
+
+        <div id="status-div">
+        </div>
+
+        <div id="image-container">
+        </div>
+
+    </div>
+    <!-- /Flickr search module-->
+
+    <!-- User defined gallery module-->
+    <div id="container-gallery" class="tab-content">
+
+        <div  class="control-container a-top">
+            <h3>Current Gallery</h3>
+            <button id="clear-gallery">Clear Gallery</button>
+        </div>
+
+        <div id="gallery">
+        </div>
+
+    </div>
+    <!-- /User defined gallery module-->
+
+    <!-- Flickr account settings -->
+    <div id="container-settings" class="tab-content">
+
+        <div class="control-container">
+
+            <h3>Flickr Account Settings</h3>
+            <div class="controls">
+                <label class="settings-label">API Key</label>
+                <input type="text" id="apiKey" />
+            </div>
+
+            <div class="controls">
+                <label class="settings-label">Pictures per page</label>
+                <select id="picsPerPage">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /Flickr account settings -->
+
+    <div id="popup-container">
+    </div>
+</body>
+</html>
