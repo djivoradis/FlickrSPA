@@ -244,7 +244,7 @@ var FlickrGallery = {
 
     //Status bar text
     getGalleryStatusText: function () {
-        return "View Selected Images (" + this.selectedImages.length + ")";
+        return "Show Gallery (" + this.selectedImages.length + ")";
     },
         
     //Toggles visibility of gallery button based on num of selected images
