@@ -93,7 +93,7 @@ var Controller = {
     //On scroll affix, adds affix-bottom, affix-top to .a-top, .a-bottom elements
     initOnSrollAffix: function(){
         window.onscroll = function () {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 
                 affixalbeTop = document.getElementsByClassName('a-top');
                 for (var i = 0; i < affixalbeTop.length; i++) {
